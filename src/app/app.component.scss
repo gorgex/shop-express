@@ -2,15 +2,18 @@ main {
     background-color: #ecf0f1;
 
     .container {
-        width: 1120px;
+        width: 100%;
+        max-width: 1120px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: center;
         margin: 0 auto;
         padding: 20px;
     }
 
     .card {
+        position: relative;
         width: 250px;
         height: 300px;
         display: flex;
@@ -21,6 +24,23 @@ main {
         border-radius: 12px;
         background-color: #FFFFFF;
 
+        .delete {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50%;
+            background-color: #e74c3c;
+            transform: rotate(45deg);
+        }
+
         img {
             width: 80%;
         }
@@ -28,11 +48,41 @@ main {
         a {
             color: #34495e;
         }
-        
+
         .price {
-                font-size: 20px;
-                font-weight: bold;
-                color: #e74c3c;
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .cart {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            height: 24px;
+            width: 24px;
+
+            &:hover {
+                cursor: pointer;
             }
+        }
+    }
+
+    .fab {
+        position: fixed;
+        right: 32px;
+        bottom: 32px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #34495e;
+        font-size: 28px;
+        font-weight: bold;
+        background-color: #F2BE5C;
+        border-radius: 50%;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+        cursor: pointer;
     }
 }

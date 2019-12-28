@@ -1,0 +1,37 @@
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+
+    form {
+        width: 300px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background-color: #FFFFFF;
+
+        input {
+            width: 230px;
+            padding: 10px 15px;
+            margin: 5px;
+            border: 1px #EEEEEE solid;
+            border-radius: 5px;
+
+            &[type="submit"] {
+                color: #000000;
+                background-color: orange;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

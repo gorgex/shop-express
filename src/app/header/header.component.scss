@@ -1,0 +1,31 @@
+header {
+    height: 80px;
+    background-color: #F2BE5C;
+
+    .container {
+        max-width: 1120px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        .logo {
+            width: 100px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 100%;
+                margin-right: 15px;
+            }
+
+            span {
+                color: #FFFFFF;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
