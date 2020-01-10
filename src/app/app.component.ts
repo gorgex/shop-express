@@ -25,10 +25,17 @@ export class AppComponent implements OnInit {
 
   addProduct() {
     const product = {
-      "name": "Google Pixel 4",
-      "price": "2699"
+      "name": "Test Item",
+      "price": "1",
+      "image": "uploads/logo.png"
     }
+    // const product = {
+    //   "name": "Google Pixel 4",
+    //   "price": "2699",
+    //   "image": "uploads/0107758_google-pixel-4-xl-single-sim-6gb-ram-64gb-lte-black_550.png"
+    // }
     this.dataService.addProduct(product).subscribe();
+    window.location.reload();
   }
 
   deleteProduct(product) {

@@ -15,7 +15,6 @@ export class DataService {
   }
 
   addProduct(product) {
-    console.log(product); 
     return this._http.post<Product>(`${this.apiUrl}/products`, product);
   }
 

@@ -1,15 +1,14 @@
-<app-header *ngIf="!admin()"></app-header>
+<app-header></app-header>
 
 <main>
   <div class="container">
     <div *ngFor="let product of products$">
       <div class="card">
-        <a href="http://localhost:4200/admin" class="delete" *ngIf="admin()"
+        <a title="Delete Item" href="http://localhost:4200/admin" class="delete" *ngIf="admin()"
         (click)="deleteProduct(product)">+</a>
         <img src="http://localhost:3000/{{product.image}}">
         <a href="{{product.url}}">{{product.name}}</a>
         <span class="price">{{product.price}} ₾</span>
-        <img class="cart" src="./assets/images/cart.svg" *ngIf="!admin()">
       </div>
     </div>
   </div>
@@ -17,5 +16,5 @@
   <a class="fab" *ngIf="admin()" (click)="addProduct()">+</a>
 </main>
 
-<app-form *ngIf="this.router.url === '/new'"></app-form>
+<!-- <app-form *ngIf="this.router.url === '/new'"></app-form> -->
 <!-- <router-outlet></router-outlet> -->
